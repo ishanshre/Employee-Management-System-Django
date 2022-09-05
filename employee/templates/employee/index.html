@@ -1,0 +1,14 @@
+{% extends 'employee/base.html' %}
+{% block title %}Home{% endblock title %}
+
+
+{% block body %}
+    <div class="container">
+        <center><h1>Welcome to Employee Manangement</h1></center>
+    </div>
+
+    <div class="container d-grid gap-2 col-6 mx-auto mt-5">
+        <a href="{% url 'employee:employee_list' %}" role="button" type="button" class="btn btn-outline-info btn-lg mt-5">View All Employees</a>
+        <a href="{% url 'employee:employee_create' %}" role="button" type="button" class="btn btn-outline-info btn-lg mt-5">Add Employee</a>        
+    </div>
+{% endblock body %}

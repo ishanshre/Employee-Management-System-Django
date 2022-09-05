@@ -1,0 +1,17 @@
+{% extends 'employee/base.html' %}
+{% block title %}Delete{% endblock title %}
+
+
+{% block body %}
+
+    <div class="container d-grid gap-2 col-6 mx-auto mt-5">
+        <center><h1>Delete Employee: {{ object.first_name }} {{ object.last_name }}</h1></center>
+        <div class="container">
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Delete" class="btn btn-outline-success">
+            </form>
+        </div>
+        
+    </div>
+{% endblock body %}

@@ -1,0 +1,22 @@
+{% extends 'employee/base.html' %}
+{% block title %}Home{% endblock title %}
+
+
+{% block body %}
+
+    <div class="container d-grid gap-2 col-6 mx-auto mt-5">
+        <center><h1>Employee Detail</h1></center>
+        <div class="container">
+            <h5><strong>Full Name: </strong>{{ employees.first_name|title }} {{ employees.last_name|title }}</h5>
+            <p><strong>Role:</strong> &emsp13; {{ employees.role }} </p>
+            <p><strong>Department:</strong> &emsp13; {{ employees.dept.name }} </p>
+            <p><strong>Department Location:</strong> &emsp13; {{ employees.dept.location }} </p>
+            <p><strong>Salary:</strong> &emsp13; {{ employees.salary }} </p>
+            <p><strong>Bonus:</strong> &emsp13; {{ employees.bonus }} </p>
+            <p><strong>Date Hired:</strong> &emsp13; {{ employees.hire_date }} </p>
+        </div>
+        <div class="container">
+            <a href="{% url 'employee:employee_list' %}" type="button" role="button" class="btn btn-outline-success">Go back</a>
+        </div>
+    </div>
+{% endblock body %}
